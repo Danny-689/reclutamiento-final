@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.java.edu.kinal.reclutamiento.controller.AspiranteController">
+
+    <top>
+        <HBox spacing="10">
+            <Label text="Sistema de Reclutamiento"/>
+            <Button text="Cerrar sesión" onAction="#cerrarSesion"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <Label text="Gestión de Aspirantes"/>
+
+            <GridPane hgap="10" vgap="10">
+                <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Apellido:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtApellido" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                <Label text="Correo:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Teléfono:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtTelefono" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                <Label text="Dirección:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtDireccion" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Edad:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtEdad" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button text="Guardar" onAction="#guardar"/>
+                <Button text="Actualizar" onAction="#actualizar"/>
+                <Button text="Eliminar" onAction="#eliminar"/>
+                <Button text="Limpiar" onAction="#limpiar"/>
+            </HBox>
+
+            <Label text="Listado de Aspirantes"/>
+
+            <TableView fx:id="tablaAspirantes" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="100"/>
+                    <TableColumn fx:id="colApellido" text="Apellido" prefWidth="100"/>
+                    <TableColumn fx:id="colCorreo" text="Correo" prefWidth="150"/>
+                    <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+                    <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="150"/>
+                    <TableColumn fx:id="colEdad" text="Edad" prefWidth="50"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

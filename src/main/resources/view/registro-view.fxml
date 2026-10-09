@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="435.0" prefWidth="376.0" spacing="10" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.edu.kinal.reclutamiento.controller.LoginController">
+   <AnchorPane prefHeight="446.0" prefWidth="376.0">
+      <children>
+           <Label layoutX="178.0" layoutY="38.0" text="Correo:" />
+           <TextField fx:id="txtCorreo" layoutX="123.0" layoutY="66.0" promptText="Ingresa tu correo" />
+      
+           <Label layoutX="166.0" layoutY="115.0" text="Contraseña:" />
+           <PasswordField fx:id="txtContrasena" layoutX="123.0" layoutY="146.0" promptText="Ingresa tu contraseña" />
+      
+             <Label layoutX="128.0" layoutY="14.0" text="Sistema de Reclutamiento" />
+           <Button layoutX="103.0" layoutY="301.0" onAction="#irRegistro" text="Registrarse" />
+           <Button layoutX="205.0" layoutY="301.0" onAction="#iniciarSesion" text="Cancelar" />
+      </children>
+   </AnchorPane>
+
+    <HBox alignment="CENTER" spacing="10" />
+
+</VBox>
